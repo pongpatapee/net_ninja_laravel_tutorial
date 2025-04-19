@@ -1,14 +1,16 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Laravel tutorial</title>
+    <title>Ninjas</title>
 </head>
 <body>
-    <h1>Laravel Tutorial</h1>
+   <h2>Available ninjas</h2> 
 
-    <a href="/ninjas">Find ninjas</a>
+   <ul>
+    <li>Ninjas here</li>
+   </ul>
 </body>
 </html>
