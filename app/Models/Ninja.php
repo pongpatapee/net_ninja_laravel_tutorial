@@ -20,4 +20,9 @@ class Ninja extends Model
         'skill',
         'bio',
     ];
+
+    public function dojo()
+    {
+        return $this->belongsTo(Dojo::class);
+    }
 }
