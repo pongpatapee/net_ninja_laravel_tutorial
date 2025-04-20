@@ -35,7 +35,7 @@ class NinjaController extends Controller
         $validated = $request->validate([
             'name' => 'required|string|max:255',
             'skill' => 'required|integer|min:0|max:100',
-            'bio' => 'required|string|min:1|max:1000',
+            'bio' => 'required|string|min:20|max:1000',
             'dojo_id' => 'required|exists:dojos,id',
 
         ]);
