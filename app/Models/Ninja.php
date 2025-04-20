@@ -19,6 +19,7 @@ class Ninja extends Model
         'name',
         'skill',
         'bio',
+        'dojo_id',
     ];
 
     public function dojo()

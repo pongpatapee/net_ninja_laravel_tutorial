@@ -1,5 +1,5 @@
 <x-layout>
-    <form action="" method="">
+    <form action="{{ route('ninjas.store') }}" method="POST">
         {{-- Prevents malicious attacks --}}
         @csrf
 
