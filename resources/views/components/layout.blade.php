@@ -13,7 +13,7 @@
 <body>
     <header>
         <nav>
-            <h1>Ninja Netowrk</h1>
+            <h1>Ninja Network</h1>
 
             <a href="/ninjas">All Ninjas</a>
             <a href="/ninjas/create">Create New Ninjas</a>
