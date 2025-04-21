@@ -15,9 +15,9 @@ class NinjaController extends Controller
         return view('ninjas.index', ['ninjas' => $ninjas]);
     }
 
-    public function show($id)
+    public function show(Ninja $ninja)
     {
-        $ninja = Ninja::with('dojo')->findOrFail($id);
+        $ninja->load('dojo');
         return view('ninjas.show', ['ninja' => $ninja]);
     }
 
@@ -30,8 +30,6 @@ class NinjaController extends Controller
 
     public function store(Request $request)
     {
-
-
         $validated = $request->validate([
             'name' => 'required|string|max:255',
             'skill' => 'required|integer|min:0|max:100',
@@ -45,9 +43,8 @@ class NinjaController extends Controller
         return redirect()->route('ninjas.index')->with('success', 'Ninja Created');
     }
 
-    public function destroy($id)
+    public function destroy(Ninja $ninja)
     {
-        $ninja = Ninja::findOrFail($id);
         $ninja->delete();
 
         return redirect()->route('ninjas.index')->with('success', 'Ninja Deleted');
